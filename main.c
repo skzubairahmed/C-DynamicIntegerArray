@@ -36,6 +36,7 @@ int main(){
         printf("%d, ", data -> data[i]);
     }
     printf("\n");
+    free(data -> data);
     free(data);
 }
 
