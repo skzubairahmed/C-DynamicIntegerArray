@@ -12,6 +12,6 @@ Some key features of the project:
 
 4.The first 4 bytes is used to store the entered values and the additional 4 bytes of storage is kept on standby to use as a data leak buffer if needed.
 
-5.When the user is finished with entering data, the can enter "~" to stop the input process.
+5.When the user is finished with entering data, they can enter "~" to stop the input process.
 
 6.The array along with the resized capacity of the array gets diplayed.
