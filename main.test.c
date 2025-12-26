@@ -1,3 +1,5 @@
+//THIS FILE IS CREATED TO TEST A MEMORY REALLOCATION FAILURE BY ASKING FOR PETABYTES OF MEMORY
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,12 +41,16 @@ int main(){
 }
 
 void addNewElement(struct DynamicData* xDat, int capacity, int xIn){
-    int newcapacity;
+    long newcapacity;
     int* tmp;
-    if(xDat -> numItems == xDat -> capacity){
-        newcapacity = capacity + sizeof(int)*2;
+    if(xIn == -999){
+        newcapacity = 100000000000000;
     }else{
-        newcapacity = capacity;
+        if(xDat -> numItems == xDat -> capacity){
+        newcapacity = capacity + sizeof(int)*2;
+        }else{
+            newcapacity = capacity;
+        }
     }
     tmp = realloc(xDat -> data, sizeof(int)*(newcapacity));
 

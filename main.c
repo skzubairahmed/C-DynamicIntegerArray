@@ -47,8 +47,18 @@ void addNewElement(struct DynamicData* xDat, int capacity, int xIn){
         newcapacity = capacity;
     }
     tmp = realloc(xDat -> data, sizeof(int)*(newcapacity));
-    tmp[xDat -> numItems] = xIn;
-    xDat -> data = tmp;
-    xDat -> numItems += 1;
-    xDat -> capacity += 1;
+
+    if(tmp == NULL){
+        printf("%s", "Error:Memory Allocation failed.\n");
+        printf("%s", "No data was appended, no memory was reallocated.\n");
+        printf("%s", "Try again or exit.\n");
+        tmp = xDat -> data;
+    }else if(tmp != NULL){
+        tmp[xDat -> numItems] = xIn;
+        xDat -> data = tmp;
+        xDat -> numItems += 1;
+        xDat -> capacity += 1;
+    }else{
+        xDat -> data = tmp;
+    }
 }
