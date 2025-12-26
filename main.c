@@ -31,6 +31,7 @@ int main(){
     
     printf("\n");
     printf("Resized to %d bytes.\n", data -> capacity*sizeof(int));
+    //printf("%zu\n", sizeof(data -> data));
     for(int i = 0; i < data -> numItems; i++){
         printf("%d, ", data -> data[i]);
     }
