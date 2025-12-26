@@ -19,5 +19,6 @@ It is the equivalent of the List data structure in Python.
 7. The array along with the resized capacity of the array gets diplayed.
 
 ### How to test for Memory Reallocation failure :- 
-1. To run the test, "main.test.c" must be used (or) main-test must be executed.
+1. To run the test, "main.test.c" must be used.
+
 2. While the test script is executing if -999 is entered, a Memory Reallocation failure is simulated. 
